@@ -1,0 +1,81 @@
+.shop-card {
+    position: relative;
+    width: 340px;
+    height: 530px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0px 7px 23px -8px rgba(0, 0, 0, 0.75);
+
+    .poke-list {
+        max-height: 400px;
+        overflow-y: auto;
+
+        table {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            width: 100%;
+            text-align: start;
+
+            height: 600px;
+            max-height: 600px;
+            overflow-y: auto;
+
+            tr {
+                height: 60px;
+                display: flex;
+                align-items: center;
+
+                .poke-info {
+                    #poke-img {
+                        width: 55px;
+                    }
+                }
+
+                .name-price {
+                    margin-left: 10px;
+                }
+
+                .remove-btn-content {
+                    margin-left: 100px;
+                    #remove {
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 4px;
+                        background-color: firebrick;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            tr:nth-child(odd) {
+                background-color: #dddddd;
+            }
+        }
+    }
+
+    .total-content {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+
+        .buy {
+            margin-left: 70px;
+            width: 60px;
+            height: 30px;
+            background-color: darkred;
+            color: white;
+            border-radius: 4px;
+        }
+    }
+
+    #empty-content {
+        margin-top: 100px;
+
+        #empty-shopping-car {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

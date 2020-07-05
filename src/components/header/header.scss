@@ -1,0 +1,31 @@
+#header-content {
+    background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color: white;
+    }
+
+    #search-content {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            width: 400px;
+            height: 40px;
+            font-size: large;
+            text-align: center;
+        }
+
+        button {
+            width: 40px;
+            height: 45px;
+        }
+    }
+ 
+}
