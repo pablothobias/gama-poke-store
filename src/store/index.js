@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 function pokemonStore(state = INITIAL_STATE, action) {
     switch (action.type) {
         case 'ADD_POKEMON':
-            if (state.pokemons.some(poke => poke.name == action.pokemon.name)) {
+            if (state.pokemons.some(poke => poke.name === action.pokemon.name)) {
                 alert("You have already selected this pokemon.")
                 return state;
             }
