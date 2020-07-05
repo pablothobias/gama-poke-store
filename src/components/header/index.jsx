@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => (
     <header id="header-content">
@@ -9,7 +9,7 @@ const Header = () => (
         <div id="search-content">
             <input type="text" placeholder="Search for a Pokemón" />
             <button>
-                <FontAwesomeIcon icon={faHome} />
+                <FontAwesomeIcon icon={faSearch} />
             </button>
         </div>
     </header>

@@ -9,9 +9,12 @@ const Main = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+
+        const randomOffset = Math.random() * (200 - 1) + 1;
+
         const fetchData = async () => {
             const result = await axios(
-                'https://pokeapi.co/api/v2/pokemon?limit=10',
+                `https://pokeapi.co/api/v2/pokemon?limit=10&offset=${randomOffset}`,
             );
 
             setData(result.data.results);

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import './shop-card.scss'
 
@@ -22,6 +24,10 @@ const ShopCard = () => {
         dispatch({ type: 'REMOVE_POKEMON', id: pokemon.id, price: Number(pokemon.price) });
     };
 
+    const buyPokemons = () => {
+        alert("Nice! You completed your purchase worth U$" + total);
+    };
+
     return (
         <div className="shop-card">
             <h2>Shopping Car</h2>
@@ -40,7 +46,9 @@ const ShopCard = () => {
                                         <p>{pokemon.name} - U$ {pokemon.price}</p>
                                     </span>
                                     <span className="remove-btn-content">
-                                        <button id="remove" onClick={() => removePokemon(pokemon)}></button>
+                                        <button id="remove" onClick={() => removePokemon(pokemon)}>
+                                            <FontAwesomeIcon icon={faTrash} />
+                                        </button>
                                     </span>
                                 </tr>
                             ))}
@@ -56,7 +64,7 @@ const ShopCard = () => {
             {totalDisplay > 0 &&
                 <div className="total-content">
                     <b>Total : U$ {total.toFixed(2)}</b>
-                    <button className="buy">Buy!</button>
+                    <button className="buy" onClick={buyPokemons}>Buy!</button>
                 </div>}
         </div>
     );
