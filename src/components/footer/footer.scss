@@ -1,0 +1,24 @@
+.footer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .author {
+        color: white;
+    }
+    .app-name {
+        color: white;
+    }
+    .github {
+        color: white;
+
+        a {
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

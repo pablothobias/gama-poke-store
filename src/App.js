@@ -5,6 +5,7 @@ import store from './store';
 import Header from './components/header';
 import Main from './components/main';
 import ShopCard from './components/shop-card';
+import Footer from './components/footer';
 
 import './App.css';
 
@@ -21,7 +22,9 @@ function App() {
         <div className="aside">
           <ShopCard></ShopCard>
         </div>
-        <div className="footer"></div>
+        <div className="footer">
+          <Footer></Footer>
+        </div>
       </div>
     </Provider>
   );
